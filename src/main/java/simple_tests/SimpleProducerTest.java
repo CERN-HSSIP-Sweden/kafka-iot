@@ -1,3 +1,5 @@
+package simple_tests;
+
 import com.google.common.io.Resources;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -14,17 +16,16 @@ public class SimpleProducerTest {
         new SimpleProducerTest().run();
     }
 
-
     private void run() {
-
-        try (InputStream propsInputStream = Resources.getResource("producer.props")
-                .openStream()) {
+        try (InputStream propsInputStream =
+                     Resources.getResource("producer-test1.props")
+                    .openStream())
+        {
             Properties props = new Properties();
             props.load(propsInputStream);
             KafkaProducer<String, String> producer = new KafkaProducer<>(props);
 
             Scanner sc = new Scanner(System.in);
-
             while (true) {
                 System.out.print("\n" +
                         "[1] New message\n" +
@@ -55,6 +56,5 @@ public class SimpleProducerTest {
         catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }
