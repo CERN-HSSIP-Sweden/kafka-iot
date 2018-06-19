@@ -10,7 +10,7 @@ The entirety of this documentation was written by Eli Adelhult and Gustav SÃ¶rnÃ
 First of all, you need to install Telegraf. Visit [influxdata.com/downloads](http://influxdata.com/downloads) and follow the instructions. If the file */etc/telegraf/telegraf.conf* doesn't exist, generate a default config file (which includes all plugins that we will use) with the following command:
 
 ```
-telegraf config > /etc/telegraf/telegraf.conf
+$ telegraf config > /etc/telegraf/telegraf.conf
 ```
 
 ### Telegraf to Kafka
@@ -25,7 +25,7 @@ Alternatively you can just uncomment and change the lines of code we are interes
 
 For testing purposes you can execute the following command which will send cpu-stats to the Kafka topic specified.
 ```
-telegraf --input-filter cpu --output-filter kafka
+$ telegraf --input-filter cpu --output-filter kafka
 ```
 
 ### Kafka to InfluxDB via Telegraf
@@ -41,7 +41,7 @@ We use the [Kafka consumer input plugin](https://github.com/influxdata/telegraf/
 ```
 Executing the command below makes Telegraf read data from the specified topic(s) and send it to InfluxDB.
 ```
-  telegraf --input-filter kafka_consumer --output-filter influxdb
+$ telegraf --input-filter kafka_consumer --output-filter influxdb
 ```
 
 
@@ -71,17 +71,17 @@ agent.sinks.sink.channel = channel
 ```
 Now, start the flume-ng executable.
 ```
-bin/flume-ng agent -n agent --conf conf --conf-file conf/flume-to-kafka.conf
+$ bin/flume-ng agent -n agent --conf conf --conf-file conf/flume-to-kafka.conf
 ```
 Create a new shell and start a new telnet-instance.
 ```
-telnet localhost 44444
+$ telnet localhost 44444
 ```
 If you write some messages and press ENTER between, the messages should show up in your Kafka topic.
 
 ### Kafka to InfluxDB via Flume
 Telegraf is most likely a better option for this particular use-case since it nativly supports MQTT, Kafka and InfluxDB. However, if you wish to use Flume you could use one of the following methods:
 
-* **HTTP-API**  
+* **HTTP-API**
 More information on this topic can be found on: [flume-http-sink](https://github.com/hmrc/flume-http-sink) and [InfluxDB guide ](https://docs.influxdata.com/influxdb/v1.5/guides/writing_data/)
 * **[Flume-InfluxDB-Sink](https://github.com/szaharici/Flume-InfluxDB-Sink)**
