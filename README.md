@@ -1,5 +1,5 @@
 # Setting up Flume & Telegraf with Kafka and InfluxDB
-![image](graph1.png "Graphical representation of the setup")
+![image](readme-graphics/graph1.png "Graphical representation of the setup")
 
 ## About this documentation
 This documentation assumes that you have already know how to set up a cluster of Kafka brokers as well as how to use InfluxDB. If you don't, more information on this topic can be found in the [NILE user guide](http://nile-user-guide.web.cern.ch/). All files that will be used (including the Telegraf and Flume config files) can also be found on [Github](https://github.com/gruffo/CERN-HSSIP-Kafka). The code snippets below were tested on Mac and should work on Linux-based systems. For Windows, please check the documentation of the specific tools mentioned.
