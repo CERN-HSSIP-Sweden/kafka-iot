@@ -2,7 +2,7 @@
 ![image](graph1.png "Graphical representation of the setup")
 
 ## About this documentation
-This documentation assumes that you have already know how to set up a cluster of Kafka brokers as well as how to use InfluxDB. If you don't, more information on this topic can be found in the [NILE user guide](http://nile-user-guide.web.cern.ch/). All files that will be used (including the Telegraf and Flume config files) can also be found on [github](https://github.com/gruffo/CERN-HSSIP-Kafka). The code snippets below were tested on Mac and should work on Linux-based systems. For Windows, please check the documentation of the specific tools mentioned.
+This documentation assumes that you have already know how to set up a cluster of Kafka brokers as well as how to use InfluxDB. If you don't, more information on this topic can be found in the [NILE user guide](http://nile-user-guide.web.cern.ch/). All files that will be used (including the Telegraf and Flume config files) can also be found on [Github](https://github.com/gruffo/CERN-HSSIP-Kafka). The code snippets below were tested on Mac and should work on Linux-based systems. For Windows, please check the documentation of the specific tools mentioned.
 
 The entirety of this documentation was written by Eli Adelhult and Gustav Sörnäs with guidance from Manuel Martin Marquez in 2018 as a part of [CERN's High School Student Internship Programme](https://hssip.web.cern.ch/) (HSSIP).
 
@@ -82,6 +82,6 @@ If you write some messages and press ENTER between, the messages should show up 
 ### Kafka to InfluxDB via Flume
 Telegraf is most likely a better option for this particular use-case since it nativly supports MQTT, Kafka and InfluxDB. However, if you wish to use Flume you could use one of the following methods:
 
-* **HTTP-API**
+* **HTTP-API**  
 More information on this topic can be found on: [flume-http-sink](https://github.com/hmrc/flume-http-sink) and [InfluxDB guide ](https://docs.influxdata.com/influxdb/v1.5/guides/writing_data/)
 * **[Flume-InfluxDB-Sink](https://github.com/szaharici/Flume-InfluxDB-Sink)**
