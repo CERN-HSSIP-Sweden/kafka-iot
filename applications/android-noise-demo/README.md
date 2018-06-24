@@ -6,7 +6,7 @@ This application takes the microphone amplitude once per second and sends it to 
 Start the entire data pipeline. This includes both InfluxDB and kafka, as well as their connectors. In this example, we've used flume between our phone and kafka, and telegraf between kafka and InfluxDB. You can also start grafana, but it isn't required until you want to actually display your data.
 
 ## Install the application
-Build the app in Android Studio (or download the apk from the releases-page) and install it on your phone. Connect the phone to your computer and run
+Build the app in Android Studio (or install the apk from *./target*) and install it on your phone. Connect the phone to your computer and run
 ```
 $ adb reverse tcp:4444 tcp:4444
 ```
