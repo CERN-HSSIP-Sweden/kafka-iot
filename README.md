@@ -47,7 +47,7 @@ $ telegraf --input-filter kafka_consumer --output-filter influxdb
 
 
 ## Flume
-Download Flume from [flume.apache.org/download.html](https://flume.apache.org/download.html). We recommend reading the [data flow model in the user guide](https://flume.apache.org/FlumeUserGuide.html#data-flow-model) in order to understand.
+Download Flume from [flume.apache.org/download.html](https://flume.apache.org/download.html). We recommend reading the [data flow model in the user guide](https://flume.apache.org/FlumeUserGuide.html#data-flow-model) in order to understand more about Flume and what it aims to do.
 
 ### Flume to Kafka
 In the flume installation directory, create a configuration file in *conf*, for example *conf/flume-to-kafka.conf*, and add the following to it.
