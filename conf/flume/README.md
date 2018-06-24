@@ -8,7 +8,7 @@ $ bin/flume-ng agent -n agent --conf conf --conf-file conf/kafka-input.conf
 ```
 
 ## kafka_output.conf
-*kafka_output.conf* puts data from netcat (tcp-port on localhost) and pushes it to a kafka-topic. This is what we used in the android-demo. Usage:
+*kafka_output.conf* takes data from netcat (basically a tcp-port on localhost) and pushes it to a kafka-topic. This is what we used in the android demo. Usage:
 ```
 $ bin/flume-ng agent -n agent --conf conf --conf-file conf/kafka_output.conf
 ```
