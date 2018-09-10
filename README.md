@@ -1,4 +1,4 @@
-# Setting up Flume & Telegraf with Kafka and InfluxDB
+# Setting up Flume and Telegraf with Kafka and InfluxDB
 ![image](readme-graphics/graph1.png "Graphical representation of the setup")
 
 ## About this documentation
